@@ -1,0 +1,57 @@
+{
+    "Alina": {
+        "name": "Alina",
+        "price": 50,
+        "description": "chocolade cake",
+        "image": "images/3931069.png"
+    },
+
+    "Bella": {
+        "name": "Bella",
+        "price": 55,
+        "description": "chocolade cream cake",
+        "image": "images/3917221.png"
+    },
+
+    "Caily": {
+        "name": "Caily",
+        "price": 40,
+        "description": "chocolade mus",
+        "image": "images/3917236.png"
+    },
+
+    "Diana": {
+        "name": "Diana",
+        "price": 44,
+        "description": "chocolade white mus",
+        "image": "images/3931058.png"
+    },
+
+    "Ella": {
+        "name": "Ella",
+        "price": 52,
+        "description": "cream white mus",
+        "image": "images/3931081.png"
+    },
+
+    "Felicia": {
+        "name": "Felicia",
+        "price": 55,
+        "description": "cake white candlse",
+        "image": "images/3931051.png"
+    },
+
+    "Isa": {
+        "name": "Isa",
+        "price": 65,
+        "description": "cake chocolade cream",
+        "image": "images/3931059.png"
+    },
+
+    "Lillie": {
+        "name": "Lillie",
+        "price": 80,
+        "description": "cake chocolade cream",
+        "image": "images/3931088.png"
+    }
+}

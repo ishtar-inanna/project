@@ -10,9 +10,9 @@ function goodsOut(data) {
     for (let key in data) {
         out += '<div class="cart">';
         out += `<p class="name">${data[key].name}</p>`;
-        out += `<img src="${data[key].image}" alt="" width="150px" height="150px"/>`;
+        out += `<img src=${data[key].image} alt="" width="60px" height="60px"/>`;
         out += `<div class="cost">${data[key].price}</div>`;
-        out += `<button class="add-to-cart" data-id="${key}">Buy</button>`;
+        out += `<button class="add-to-cart" data-id=${key}>Buy</button>`;
         out += '</div>'
     }
     $('.goods-out').html(out);
@@ -58,7 +58,7 @@ function loadCart() {
     }
 }
 
-$(document).ready(function () {
-    init();
-    loadCart();
-})
+// $(document).ready(function () {
+//     init();
+//     loadCart();
+// })

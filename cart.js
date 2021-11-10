@@ -14,29 +14,29 @@ function loadCart() {
 
 function showCart() {  
   
-        $.getJSON('goods.json', function(data){
-        
-        let goods = data; //всі товари в масиві
-        let out = '';
+    $.getJSON('goods.json', function(data){
+    
+    let goods = data; //всі товари в масиві
+    let out = '';
 
-        for (let key in cart) {
-            out += '<div class="cart">';
-            out += `<button class="delete" data-id=${key}>X</button>`;
-            out += `<p class="name">${data[key].name}</p>`;
-            out += `<img src=${data[key].image} alt="" width="80px" height="80px"/>`;
-            out += `<div class="price"> Price: ${data[key].price}</div>`;
-            out += `<button class="minus" data-id=${key}>-</button>`;
-            out += `<button class="plus" data-id="${key}">+</button>`;
-            out +=  cart[key] * goods[key].price;
-            out += '</div>'
-        }
-        
-        $('.main-cart').html(out);
-        $('.plus').on('click', plusGoods);
-        $('.minus').on('click', minusGoods);
-        $('.delete').on('click', deleteGoods);
-    })
+    for (let key in cart) {
+        out += '<div class="cart">';
+        out += `<button class="delete" data-id=${key}>X</button>`;
+        out += `<p class="name">${data[key].name}</p>`;
+        out += `<img src=${data[key].image} alt="" width="80px" height="80px"/>`;
+        out += `<div class="price"> Price: ${data[key].price}</div>`;
+        out += `<button class="minus" data-id=${key}>-</button>`;
+        out += `<button class="plus" data-id="${key}">+</button>`;
+        out +=  cart[key] * goods[key].price;
+        out += '</div>'
     }
+    
+    $('.main-cart').html(out);
+    $('.plus').on('click', plusGoods);
+    $('.minus').on('click', minusGoods);
+    $('.delete').on('click', deleteGoods);
+})
+}
 
 
 function plusGoods() {
@@ -102,7 +102,7 @@ function sendEmail () {
             alert('Thank you!))');
             removeItemsInLS();
             removeChildrenFromCart();
-            $('.email-field').css()
+            $('.email-field').fadeOut(2000);
         } else {
             alert('Cart is empty')
         }
@@ -110,7 +110,6 @@ function sendEmail () {
         alert('fill the filds, please')
     }
 }
-
 
 $(document).ready(function() {
     loadCart();

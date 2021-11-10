@@ -5,9 +5,12 @@ function galaryShopList(product) {
     let curentProduct = {name: n, image: i, testy: tT, description: s} = product;
 
     allProducts.push(curentProduct);
-    console.log(allProducts);
-      
+    localStorage.setItem("products", JSON.stringify(allProducts))
+    console.log(allProducts);    
 }
+
+
+console.log(allProducts);
 
 const submit = document.getElementById('submit')
 
@@ -32,3 +35,4 @@ submit.addEventListener('click', () => {
    galaryShopList(newProduct);
 
 });
+
